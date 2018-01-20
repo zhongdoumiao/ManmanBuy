@@ -2,9 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买-首页</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-
+<div class="container">
+    <!--头部-->
+    <div class="header">
+        <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+        <div class="app">
+            <span><img src="./images/header_app.png" alt=""></span>
+        </div>
+    </div>
+    <div class="main">
+                <!--search-->
+                <div class="search mui-clearfix">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <button>搜索</button>
+                </div>
+                <!--nav-->
+                <div class="nav mui-clearfix">
+                    <ul>
+                        <!--挖个坑-->
+                    </ul>
+                </div>
+                <!--content-->
+                <div class="content">
+                    <div class="list-title-content">
+                        <span>品牌排行</span>
+                        <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
+                    </div>
+                    <ul>
+                        <!--挖个坑-->
+                        <li class="mui-clearfix">
+                            <a href="#">
+                                <img src="" alt="">
+                                <p class="">移动端凑单品：海天 鲜味 生抽 1.28L<span style="color: #ff6c00">10.9元</span></p>
+                                <span class="text">天猫旗舰店 | 01-19 19:44</span>
+                                <span class="mui-icon mui-icon-chatbubble right-icon">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="more">
+                        更多优惠信息》
+                    </a>
+                    <div class="list-title-content">
+                        <span>品牌排行</span>
+                        <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
+                    </div>
+                </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class="footer-top">
+            <a href="#" class="login">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="toTop"><span><img src="./images/top.jpg" alt=""></span>返回顶部</a>
+        </div>
+        <div class="footer-bottom">
+            <span>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </span>
+            <span>m.manmanbuy.com</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+
+<script type="text/html" id="tpl">
+    {{each result v i}}
+        <li data-id="{{v._id}}" data-index="{{i}}" class="{{i>7?'now':''}}">
+            <a href="{{v.titlehref}}">
+                {{#v.img}}
+                <p>{{v.name}}</p>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="list-tpl">
+{{each result v i}}
+<li class="mui-clearfix">
+    <a href="moneyproduct.html?productid={{v.productId}}">
+        {{#v.productImgSm}}
+        <span class="pName">{{v.productName}}<span style="color: #ff6c00">{{v.productPinkage}}</span></span>
+        <span class="text">{{v.productTips}} | {{v.productTime}}</span>
+        <span class="mui-icon mui-icon-chatbubble right-icon">{{v.productComCount.replace("有","").replace("人评论","")}}</span>
+    </a>
+</li>
+{{/each}}
+</script>

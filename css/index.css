@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  max-width: 750px;
+  height: 1rem;
+  background-color: #ff841d;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header a {
+  position: absolute;
+  top: 0.24rem;
+  left: 0.2rem;
+  width: 3.72rem;
+  height: 0.42rem;
+  display: block;
+}
+.header img {
+  width: 100%;
+  display: block;
+}
+.header span {
+  position: absolute;
+  top: 0.12rem;
+  right: 0.4rem;
+  width: 0.68rem;
+  height: 0.68rem;
+}
+.main .search {
+  padding: 0.2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #cccccc;
+}
+.main input {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #f1f1f1;
+  width: 75%;
+  float: left;
+  border-radius: 30px;
+  margin-bottom: 0;
+  font-size: 0.28rem;
+  border: none;
+  box-sizing: border-box;
+}
+.main button {
+  background-color: #ff841d;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  width: 20%;
+  float: right;
+  border-radius: 30px;
+  padding: 0;
+  color: white;
+  font-size: 0.36rem;
+  border: none;
+  margin-bottom: 0;
+}
+.nav {
+  padding-bottom: 0.32rem;
+  background-color: #fff;
+}
+.nav li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin-top: 0.32rem;
+}
+.nav li p {
+  font-size: 0.32rem;
+}
+.nav li img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+.content ul {
+  padding: 0.3rem 0.2rem;
+}
+.content ul a {
+  display: block;
+}
+.content ul li {
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.3rem;
+}
+.content ul li .pName {
+  color: #000;
+  font-size: 0.32rem;
+  line-height: 0;
+}
+.content ul .text {
+  position: absolute;
+  bottom: 0.4rem;
+  left: 2.6rem;
+  font-size: 0.28rem;
+  height: 0.28rem;
+  line-height: 0.28rem;
+  color: #a1a1a1;
+  margin-top: 0.4rem;
+}
+.content ul .right-icon {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  font-size: 0.28rem;
+  height: 0.28rem;
+  line-height: 0.28rem;
+  color: #a1a1a1;
+  float: right;
+}
+.content ul li img {
+  float: left;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: deeppink;
+  margin-right: 0.2rem;
+  margin-top: 0.16rem;
+}
+.content .more {
+  display: block;
+  height: 0.64rem;
+  border: 1px solid #cccccc;
+  font-size: 0.36rem;
+  color: #cccccc;
+  line-height: 0.64rem;
+  text-align: center;
+  margin: 0 0.4rem 0.3rem;
+  border-radius: 5px;
+}
+.now {
+  display: none;
+}
