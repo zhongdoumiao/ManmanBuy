@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.row .mui-table-view .mui-navigate-right {
+  font-size: 0.36rem;
+}
+.row .mui-collapse-content li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.row .mui-collapse-content li a {
+  box-sizing: content-box;
+  padding: 0.1rem;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.36rem;
+  color: #333;
+}
+.row .mui-collapse-content ul {
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}

@@ -4,7 +4,7 @@
 $(function(){
     $.ajax({
         type:"get",
-        url:"http://192.168.46.71:9090/api/getindexmenu",
+        url:"http://192.168.46.24:9090/api/getindexmenu",
         success:function(info){
             console.log(info);
             var data = template("tpl",info);
@@ -20,7 +20,7 @@ $(function(){
     //查看
     $.ajax({
         type:"get",
-        url:"http://192.168.46.71:9090/api/getmoneyctrl",
+        url:"http://192.168.46.24:9090/api/getmoneyctrl",
         success:function(info){
             console.log(info);
             var data = template("list-tpl",info);

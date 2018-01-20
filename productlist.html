@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/productlist.css">
 </head>
 <body>
 <div class="container">
@@ -25,16 +25,16 @@
             <input type="text" placeholder="请输入你想比价的商品">
             <button>搜索</button>
         </div>
-        <div class="row">
-            <ul class="mui-table-view">
-                <li class="mui-table-view-cell mui-collapse" data-titleId="{{v.titleId}}">
-                    <a class="mui-navigate-right" href="#">{{v.title}}</a>
-                    <div class="mui-collapse-content">
-
-                    </div>
-                </li>
-            </ul>
+        <div class="screen">
+            <span><a href="index.html">首页></a></span>
+            <span><a href="category.html">分类></a></span>
+            <span class="category"><a href="">电视</a></span>
+            <a href="" class="select">筛选</a>
         </div>
+        <div class="lw">
+
+        </div>
+
         <div class="footer">
             <div class="footer-top">
                 <a href="#" class="login">登录</a>
@@ -57,24 +57,48 @@
 <script src="lib/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/category.js"></script>
-
+<script src="./js/productlist.js"></script>
 
 <script type="text/html" id="tpl">
     {{each result v i}}
-    <li class="mui-table-view-cell mui-collapse" data-titleid="{{v.titleId}}">
-        <a class="mui-navigate-right" href="#">{{v.title}}</a>
-        <div class="mui-collapse-content">
-        </div>
-    </li>
+    <span><a href="index.html">首页></a></span>
+    <span><a href="category.html">分类></a></span>
+    <span class="category"><a href="">{{v.category}}</a></span>
+    <a href="" class="select">筛选</a>
     {{/each}}
 </script>
-
 <script type="text/html" id="li-tpl">
-    <ul class="mui-clearfix">
+    <ul>
+        {{if result.length === 0}}
+        <p>没有更多的商品信息</p>
+        {{/if}}
         {{each result v i}}
-        <li><a href="productlist.html?categoryId={{v.categoryId}}&category={{v.category
-}}">{{v.category}}</a></li>
+        <li class="mui-clearfix">
+            {{#v.productImg}}
+            <a href="#">
+                <p class="mui-ellipsis-2">{{v.productName}}</p>
+                <span style="color: #ea3900" class="price">{{v.productPrice}}</span>
+                <div class="bottom">
+                    <span>{{v.productQuote}}</span>
+                    <span>{{v.productCom}}</span>
+                </div>
+            </a>
+        </li>
         {{/each}}
     </ul>
+    <div class="page">
+        <button class="prev">上一页</button>
+        <select name="" id="select">
+            <% for(var i = 1;i<= pages;i++){%>
+            <% if(page==i){%>
+            <option selected value="<%=i%>"><%=i%>/<%=pages%></option>
+            <%}%>
+            <%if(page!=i){%>
+            <option value="<%=i%>"><%=i%>/<%=pages%></option>
+            <%}%>
+
+            <% } %>
+        </select>
+        <button class="next">下一页</button>
+    </div>
 </script>
